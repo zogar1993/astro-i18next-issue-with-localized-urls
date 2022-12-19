@@ -5,9 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "yarn astro-i18next generate && astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
+    "build": "yarn astro-i18next generate && astro build",
     "astro": "astro"
   },
   "dependencies": {
