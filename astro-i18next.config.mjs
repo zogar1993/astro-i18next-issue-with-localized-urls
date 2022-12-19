@@ -8,4 +8,19 @@ export default {
       loadPath: "./public/locales/{{lng}}/{{ns}}.json",
     },
   },
+
+  routes: {
+    es: {
+      "hello-world": "hola-mundo",
+      "nested": {
+        "hello-world": "hola-mundo"
+      },
+      hello: {
+        index: "hola"
+      },
+      "[id]": {
+        "hello-world": "hola-mundo"
+      }
+    }
+  }
 }

@@ -6,6 +6,12 @@ import { changeLanguage } from "i18next";
 changeLanguage("en-US");
 
 const pathname = Astro.url.pathname.split("/").filter((part, i) => !(i === 1 && part === i18next.language)).join("/");
+export async function getStaticPaths() {
+    return [
+        { params: { id: "wea" } },
+        { params: { id: "fome" } }
+    ];
+}
 ---
 <main>
 	<a href={localizePath(pathname, i18next.language === "es" ? "en-US" : "es")}>
